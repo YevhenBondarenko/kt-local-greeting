@@ -1,16 +1,12 @@
 package mate.academy
 
 fun greetUsers() {
-    var name: String? = null
-    while (readLine().also { name = it }?.isNotBlank() == true) {
+    while (true) {
+        println("Please enter a name (or press Enter to quit): ")
+        val name = readLine()
+        if (name == "") break
         println("Hello $name")
     }
-
-}
-
-fun readLine(): String? {
-    println("Please enter a name (or press Enter to quit): ")
-    return kotlin.io.readLine();
 }
 
 fun main() {
